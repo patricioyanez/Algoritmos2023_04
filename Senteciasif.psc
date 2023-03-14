@@ -16,5 +16,4 @@ Algoritmo Senteciasif
 		Escribir "Ud es menor de edad"
 	FinSi
 	
-	
 FinAlgoritmo
