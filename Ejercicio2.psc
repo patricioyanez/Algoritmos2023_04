@@ -11,7 +11,11 @@ Algoritmo Ejercicio2
 		si numero1 > numero2 Entonces
 			Escribir "El numero1 es mayor(",numero1,")"
 		SiNo
-			Escribir "El numero2 es mayor o es igual al numero 1 (", numero2, ")"
+			si numero1 = numero2 Entonces
+				Escribir "Los numeros son iguales (", numero2, ")"
+			sino	
+				Escribir "El numero2 es mayor (", numero2, ")"
+			FinSi
 		FinSi
 	SiNo
 		Escribir "Solo se permite ingresar numeros positivos"
