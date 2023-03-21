@@ -2,6 +2,7 @@ Algoritmo ejercicio1A
 	// Solicitar n cantidad de notas al usuario
 	// promediarlas y entregar resultado (aprobado o no)
 	// las notas deben estar en el rango de 10 a 70
+	// solicitar ponderación de cada nota
 	Definir cantidadNotas Como Entero
 	Definir nota Como Entero
 	Definir resultado Como Real
