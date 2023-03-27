@@ -15,6 +15,43 @@ Algoritmo While_Mientras
 		Escribir "[5] Salir"  
 		Escribir "Seleccione opcion:"
 		Leer opcion
+		
+		si opcion = 1 Entonces
+			Escribir "Ingrese 1er nro:"
+			Leer nro1
+			Escribir "Ingrese 2do nro:"
+			Leer nro2
+			Escribir "El total es: ", nro1 + nro2
+			Escribir "Precione cualquier tecla para continuar"
+			Esperar Tecla
+		FinSi
+		si opcion = 2 Entonces
+			Escribir "Ingrese 1er nro:"
+			Leer nro1
+			Escribir "Ingrese 2do nro:"
+			Leer nro2
+			Escribir "El total es: ", nro1 - nro2
+			Escribir "Precione cualquier tecla para continuar"
+			Esperar Tecla
+		FinSi
+		si opcion = 3 Entonces
+			Escribir "Ingrese 1er nro:"
+			Leer nro1
+			Escribir "Ingrese 2do nro:"
+			Leer nro2
+			Escribir "El total es: ", nro1 * nro2
+			Escribir "Precione cualquier tecla para continuar"
+			Esperar Tecla
+		FinSi
+		si opcion = 4 Entonces
+			Escribir "Ingrese 1er nro:"
+			Leer nro1
+			Escribir "Ingrese 2do nro:"
+			Leer nro2
+			Escribir "El total es: ", nro1 / nro2
+			Escribir "Precione cualquier tecla para continuar"
+			Esperar Tecla
+		FinSi
 	FinMientras
 	
 FinAlgoritmo
