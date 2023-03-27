@@ -1,7 +1,7 @@
 Algoritmo While_Mientras
 	Definir valor Como Entero
 	Mientras valor < 10 Hacer
-		valor = valor + 1
+		valor = valor + 1 // contador
 		Escribir "El valor es:", valor
 	FinMientras
 	
