@@ -21,6 +21,27 @@ Algoritmo EjercicioVotacion
 		Escribir "Seleccione opción"
 		Leer opcion
 		
+		si opcion = 1 Entonces
+			candidato1 = candidato1 + 1 
+		FinSi
+		si opcion = 2 Entonces
+			candidato2 = candidato2 + 1 
+		FinSi
+		si opcion = 3 Entonces
+			votosNulos = votosNulos + 1 
+		FinSi
+		
+		si opcion = 4 Entonces
+			totalVotos =  candidato1+candidato2+votosNulos
+			p1= candidato1 * 100 / totalVotos
+			p2= candidato2 * 100 / totalVotos
+			vn= votosNulos * 100 / totalVotos
+			Escribir "Reporte de votos"
+			Escribir "candidato 1	: ", candidato1, " (", p1,"%)"
+			Escribir "candidato 2	: ", candidato2, " (", p2,"%)"
+			Escribir "Nulos			: ", votosNulos, " (", vn,"%)"
+			Escribir "Total de votos: ", totalVotos
+		FinSi
 	FinMientras
 	
 	
