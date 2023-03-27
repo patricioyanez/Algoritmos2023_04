@@ -48,7 +48,12 @@ Algoritmo While_Mientras
 			Leer nro1
 			Escribir "Ingrese 2do nro:"
 			Leer nro2
-			Escribir "El total es: ", nro1 / nro2
+			
+			si nro2 = 0 Entonces
+				Escribir "No se puede dividir por cero"
+			SiNo
+				Escribir "El total es: ", nro1 / nro2
+			FinSi
 			Escribir "Precione cualquier tecla para continuar"
 			Esperar Tecla
 		FinSi
