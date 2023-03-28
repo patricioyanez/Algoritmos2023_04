@@ -6,6 +6,18 @@ Algoritmo almacen
 	// Por otro lado, el programa debe seguir preguntando el valor del siguiente  
 	// producto y dando su resultado correspondiente a menos que ella coloque 0 
 	// o presione enter.
+	Definir precio Como Entero
+	Definir resultado Como Entero
+	Definir opcion Como Entero
+	opcion = 1
 	
+	Mientras opcion <> 0 Hacer
+		Escribir "Ingrese precio del producto:"
+		Leer precio
+		resultado = precio * 20 / 100
+		Escribir "La ganancia de ", precio, " es: ", resultado
+		Escribir "[0] para salir, otro numero para continuar"
+		leer opcion
+	FinMientras
 	
 FinAlgoritmo
