@@ -59,4 +59,6 @@ Algoritmo While_Mientras
 		FinSi
 	FinMientras
 	
+	
+	
 FinAlgoritmo
