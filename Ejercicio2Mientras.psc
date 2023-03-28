@@ -8,4 +8,26 @@ Algoritmo Ejercicio2Mientras
 	//  -	Asuma que el cálculo del pago es para un solo cliente. 
 	// 	-	Valide que la cantidad de fotocopias sea mayor a 0.
 	
+	Definir cantidad Como Entero
+	Definir resultado Como Real
+	Definir precio Como Entero
+	precio = 20
+	
+	Escribir "Ingrese cantidad de fotocopias:"
+	Leer cantidad
+	
+	si cantidad < 1 Entonces
+		Escribir "Solo se permite numeros positivos"
+	SiNo
+		total = precio * cantidad
+		
+		si cantidad>30 Entonces
+			total = total * .9
+		FinSi
+		
+		Escribir "Total a pagar es:",  total
+	FinSi
+	
+	
+	
 FinAlgoritmo
