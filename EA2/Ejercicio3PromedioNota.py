@@ -17,7 +17,11 @@ elif nota3 < 1 or nota3 > 7:
 else:
     # dentro del rango 1...7
     resultado = (nota1 + nota2 +nota3) / 3
+    print("Su promedio es: ", resultado)
     if resultado >= 4:
         print("Ud está aprobado")
     else:
         print("Ud. está reprobado, nos vemos en Enero :)")
+
+
+# hans max...
