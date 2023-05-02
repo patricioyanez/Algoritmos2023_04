@@ -10,7 +10,7 @@ for x in rango:
 
     #if letra == "a" or letra == "e"....
 
-    if letra.lower() in ("a", "e", "i", "o", "u"):
+    if letra.lower() in ("a", "e", "i", "o", "u"): ## upper() mayuscula
         vocales +=1
     else:
         consonantes += 1
