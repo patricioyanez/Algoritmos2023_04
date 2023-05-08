@@ -1,13 +1,15 @@
 opcion = ""
 
-while opcion != "3":
+while opcion != "5":
     print("1.- Sumar")
     print("2.- Restar")
-    print("3.- Salir")
+    print("3.- Multiplicar")
+    print("4.- Dividir")
+    print("5.- Salir")
 ## ejercicios: agregar Multiplicación y división
     opcion = input("Ingrese una opción:")
 
-    if opcion not in ("1", "2", "3"):
+    if opcion not in ("1", "2", "3", "4", "5"):
         print("La opción no es válida")
     elif opcion == "1":
         n1 = int(input("Ingrese 1er valor:"))
