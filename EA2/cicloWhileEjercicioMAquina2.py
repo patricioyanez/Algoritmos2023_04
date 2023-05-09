@@ -17,32 +17,38 @@
 
 # Agregar opción total de ventas: Suma todas las ventas realizadas. Ocupar un acumulador
 
+import os
 opcion = ""
 cocacola = 0
 fanta = 0
 sprite = 0
-
+totalVentas = 0
 fueVendida = False
 
 
-while opcion != "4":
+while opcion != "6":
+    os.system("cls")
+    print("********  La Maquina ********")
     print("1.- Coca-Cola")
     print("2.- Fanta")
     print("3.- Sprite")
     print("4.- Contadores")
-    print("5.- Salir")
+    print("5.- Total de ventas")
+    print("6.- Salir")
 
     opcion = input("Ingrese una opción:")
 
-    if opcion not in ("1", "2", "3", "4", "5"):
+    if opcion not in ("1", "2", "3", "4", "5", "6"):
         print("La opción no es válida")
-    if opcion == "4":
+    elif opcion == "4":
         print("**** R E P O R T E ****")
         print("CocaCola : ", cocacola)
         print("Fanta    : ", fanta)
         print("Sprite   : ", sprite)
         print("Total de bebidas: ", (cocacola+ fanta + sprite))
-
+    elif opcion == "5":
+        print("**** R E P O R T E ****")
+        print("El total de ventas es : ", totalVentas)
     else:
 
         monto = int(input("Ingrese pago:"))
@@ -60,9 +66,11 @@ while opcion != "4":
             fueVendida = False
         
         if fueVendida:
+            totalVentas += 400
             if opcion == "1":
                 cocacola += 1
             elif opcion == "2":
                 fanta += 1
             else:
                 sprite += 1
+    input("Presione enter para continuar")
