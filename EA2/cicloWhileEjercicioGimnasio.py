@@ -41,8 +41,8 @@ while opcion != "5":
     if opcion not in ("1", "2", "3", "4", "5"):
         print("La opción no es válida")
     elif opcion == "1":
-        edad = int(input("Ingrese su edad")) # se asume que se ingresará un numero
-        sexo = input("Ingrese sexo F:femenino y M:masculino")
+        edad = int(input("Ingrese su edad: ")) # se asume que se ingresará un numero
+        sexo = input("Ingrese sexo F:femenino y M:masculino: ")
 
         ## validar
         if edad < 10 or edad > 50:
@@ -78,4 +78,5 @@ while opcion != "5":
         print("Cantidad de edad joven: ", joven)
         print("Cantidad de edad nino: ", nino)
         print("Cantidad de edad adulto: ", adulto)
-        
+    input("Presione enter para continuar")
+
