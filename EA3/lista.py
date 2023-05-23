@@ -35,3 +35,28 @@ lista3 = ["a", "b"]
 lista2.extend(lista3)
 print(lista2)
 print(lista3)
+
+# eliminar
+lista2.remove("a") # POR VALOR
+print(lista2)
+lista2.pop(3) # INDICE
+print(lista2)
+lista2.pop() # ULTIMO ELEMENTO
+print(lista2)
+
+# ORDENA LOS VALORES
+##lista2.append("A")
+lista2.sort()
+print(lista2)
+
+print("hola".upper())
+print("CHAO".lower())
+
+mensaje = "Hola: Juan como estás?"
+print(mensaje.find("Juan"))
+print(mensaje.find("Ana"))
+
+rut = "20.100.200-K"
+print(rut.replace(".","").replace("-", ""))
+
+print(mensaje.replace("Juan", "Ana").replace(":",""))
