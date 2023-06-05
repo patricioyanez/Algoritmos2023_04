@@ -1,7 +1,7 @@
 #Ejercicios:
 
 # 1.1 Crear un arreglo unidimensional de tamaño 10, 
-# con elementos aleatorios de números enteros del 0 al 100, 
+# con valores aleatorios de números enteros del 0 al 100, 
 # para ello deberá investigar la función que 
 # permita crear números aleatorios.
 # 
@@ -23,4 +23,14 @@ print(numero)
 
 arreglo = np.random.randint(100, size=(10))
 print(arreglo)
+
+arreglo2 = arreglo.copy()
+print("Mayor:", arreglo2.max())
+print("Minimo:", arreglo2.min())
+print("Suma:", arreglo2.sum())
+print("Suma:", arreglo2.mean())
+
+# recorro y muestro el valor de cada item
+for valor in arreglo2:
+    print("Valor:", valor)
 

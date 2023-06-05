@@ -1,0 +1,42 @@
+# Ejercicios:
+
+# 1.- mostrar los valores y sus indices de los
+# números pares que están almacenados en una matriz de 4x4 
+# (crear con numeros aleatorios)
+# pip install numpy
+import numpy as np
+# Creamos la matriz
+matriz = np.array([
+                    [1,2,3,4],
+                    [5,6,7,8],
+                    [9,10,11,12],
+                    [13,14,15,16]
+                ])
+
+for fila in matriz:
+    for indice in range(len(fila)):
+        print("1.- El valor es:", fila[indice])
+
+for fila in matriz:
+    for valor in fila:
+        print("2.- El valor es:", valor)
+
+for fila in range(4):
+    for columna in range(4):
+        print("3.- El valor es:", matriz[fila, columna])
+
+
+from numpy import random
+matriz2 = random.randint(100, size=(4,4))
+print(matriz2)
+
+
+# 2.- Crear un arreglo de dos dimensiones de 3 x 3 
+# con números ceros, excepto la diagonal 
+# principal que debe contener en el mismo 
+# orden los siguientes elementos 1, 2 y 3.
+
+matriz = np.diag([1,2,3])
+print(matriz)
+
+#   B R E A K
