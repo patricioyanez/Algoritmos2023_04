@@ -63,6 +63,7 @@ def registroDeArriendo(casilleros):
             casilleros[fila, columna] = rut
 
             # almacena y suma las ventas realizadas
+
             if fila == 0: # es por el indice cero de la matriz
                 totalVentas += 2000
             elif fila == 1:
