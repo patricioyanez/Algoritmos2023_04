@@ -38,13 +38,62 @@ listaDeTiposCasilleros = ["1","2","3"]
 opcion = ""
 # declara las funciones para cada opción:
 def registroDeArriendo(casilleros):
-    pass
+    print("***** Registro de arriendo *****")
+    print("1.- Casillero Super Grande $2.000")
+    print("2.- Casillero Grande $1.000")
+    print("3.- Casillero Pequeño $500")
+    print("0.- Salir")
+    casillero = input("Ingrese tipo de casillero: ")
+    if casillero not in listaDeTiposCasilleros:
+        print("La opción ingresada no es válida")
+        input("Presione enter para continuar...")
+    else:
+        fila = int(casillero) # convertir de str a int. es la fila
+        # mostrar casilleros disponibles ???
+        casillerosDisponibles(casilleros, fila)
+
+        # validar que la conversión sea exitosa
+        try:
+            nroCasillero = int(input("Ingrese nro del casillero: "))
+            columna = nroCasillero -1 # matriz empieza con indice 0
+            fila -= 1 # matriz empieza con indice 0
+            rut = input("Ingrese su rut:")
+
+            # almacena el rut en el casillero seleccionado
+            casilleros[fila, columna] = rut
+
+            # almacena y suma las ventas realizadas
+            if fila == 0: # es por el indice cero de la matriz
+                totalVentas += 2000
+            elif fila == 1:
+                totalVentas += 1000
+            elif fila == 2:
+                totalVentas += 500
+
+            print("Datos guardados")
+            input("Presione enter para continuar...")
+        except: # si ingreso un casillero que no se puede convertir en número o no existe
+            print("Error en la elección del casillero")
+            input("Presione enter para continuar...")
+
 def listarCasilleros(casilleros):
     pass
 def totalDeVentas(casilleros):
     pass
 def desocuparCasillero(casilleros):
     pass
+
+def casillerosDisponibles(casilleros, fila):
+    listado = ""
+    nroCasillero = 1
+    for columna in casilleros[fila-1]:
+        if columna == "":
+            listado += str(nroCasillero) + "\n"
+        else:
+            listado += "X" + "\n"
+        nroCasillero+=1
+    print(listado)
+
 
 # definir el menú
 while opcion != "0":
