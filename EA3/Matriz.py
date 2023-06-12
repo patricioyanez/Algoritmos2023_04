@@ -28,3 +28,7 @@ print(matriz1)
 print("Suma de valores:", matriz.sum())
 print("cant. elemento  matriz:", matriz.size)
 print("tamaño  matriz:", matriz.shape)
+
+
+matriz1 = np.diag(["","","","",""])
+print(matriz1)
