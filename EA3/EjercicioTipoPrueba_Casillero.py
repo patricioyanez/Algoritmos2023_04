@@ -62,15 +62,6 @@ def registroDeArriendo(casilleros):
             # almacena el rut en el casillero seleccionado
             casilleros[fila, columna] = rut
 
-            # almacena y suma las ventas realizadas
-
-            if fila == 0: # es por el indice cero de la matriz
-                totalVentas += 2000
-            elif fila == 1:
-                totalVentas += 1000
-            elif fila == 2:
-                totalVentas += 500
-
             print("Datos guardados")
             input("Presione enter para continuar...")
         except: # si ingreso un casillero que no se puede convertir en número o no existe
