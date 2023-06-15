@@ -52,7 +52,8 @@ def registroDeArriendo(casilleros):
         # mostrar casilleros disponibles ???
         casillerosDisponibles(casilleros, fila)
 
-        # validar que la conversión sea exitosa
+        # try / except
+        # evita la "caida" de la aplicación si la conversión no se lleva a cabo
         try:
             nroCasillero = int(input("Ingrese nro del casillero: "))
             columna = nroCasillero -1 # matriz empieza con indice 0
@@ -69,11 +70,66 @@ def registroDeArriendo(casilleros):
             input("Presione enter para continuar...")
 
 def listarCasilleros(casilleros):
-    pass
-def totalDeVentas(casilleros):
-    pass
+    print("***** Lista de casilleros *****")
+    listado = ""
+    valor = ""
+
+    for fila in casilleros:
+        nroCasillero = 1
+        for columna in fila:
+            if columna != "":
+                valor = "X"
+            else:
+                valor = str(nroCasillero)
+            listado += valor + " "
+            nroCasillero+=1
+        listado += "\n"
+    print(listado)
+    input("Presione enter para continuar...")
+    
+def totalDeVentas(casilleros):    
+    print("***** Total de recaudación *****")
+    total = 0
+    filita = 0
+    for fila in casilleros:
+        for columna in fila:
+            if columna != "":
+                if filita == 0:
+                    total += 2000
+                elif filita == 1:
+                    total += 1000
+                elif filita == 3:
+                    total += 500
+        filita += 1 # permite saber cuanto cobrar según la fila
+    print("Total de recaudación:", total)
+    input("Presione enter para continuar...")
+
+
 def desocuparCasillero(casilleros):
-    pass
+    print("***** Desocupar Casillero *****")
+    print("1.- Casillero Super Grande")
+    print("2.- Casillero Grande")
+    print("3.- Casillero Pequeño")
+    print("0.- Salir")
+    casillero = input("Ingrese tipo de casillero: ")
+    if casillero not in listaDeTiposCasilleros:
+        print("La opción ingresada no es válida")
+        input("Presione enter para continuar...")
+    else:
+        fila = int(casillero) # convertir de str a int. es la fila
+        # validar que la conversión sea exitosa
+        try:
+            nroCasillero = int(input("Ingrese nro del casillero: "))
+            columna = nroCasillero -1 # matriz empieza con indice 0
+            fila -= 1 # matriz empieza con indice 0
+            # limpiar casillero
+            casilleros[fila, columna] = ""
+
+            print("Casillero liberado...\n")
+            listarCasilleros(casilleros)
+        except: # si ingreso un casillero que no se puede convertir en número o no existe
+            print("Error en la elección del casillero")
+            input("Presione enter para continuar...")
 
 def casillerosDisponibles(casilleros, fila):
     listado = ""
